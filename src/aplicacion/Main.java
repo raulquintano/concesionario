@@ -17,7 +17,8 @@ public class Main
         
         do{
             System.out.println("1) Mostrar Concesionario");
-            System.out.println("2) Salir");
+            System.out.println("2) Carrito");
+            System.out.println("3) Salir");
             opcion = lectorInt.nextInt();
             switch (opcion) 
             {
@@ -26,6 +27,9 @@ public class Main
                     break;
                 
                 case 2:
+                concesionario.mostrarCarrito();
+                    break;
+                case 3:
                 System.out.println("Gracias por usar el programa :)");
                     salir = false;
                     break;
@@ -35,7 +39,7 @@ public class Main
                     break;
 
             }
-        }while(opcion>0 && opcion < 2);
+        }while(opcion>0 && opcion < 3);
         
     }
 }

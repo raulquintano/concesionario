@@ -1,6 +1,7 @@
 package dominio;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Concesionario {
 
@@ -9,7 +10,7 @@ public class Concesionario {
     int plazas;
     float precioBase;
     Scanner lectorInt = new Scanner(System.in);
-
+    ArrayList<Vehiculo> carrito = new ArrayList<>();
 
     public void mostrarConcesionario()
     {
@@ -36,6 +37,7 @@ public class Concesionario {
             vehiculo.calcularPrecio(plazas,precioBase);
             System.out.println(vehiculo);
             System.out.println("Añadido correctamente");
+            carrito.add(vehiculo);
             System.out.println("");
         }
         else if(opcionCatalogo==2)
@@ -48,6 +50,7 @@ public class Concesionario {
             vehiculo.calcularPrecio(plazas,precioBase);
             System.out.println(vehiculo);
             System.out.println("Añadido correctamente");
+            carrito.add(vehiculo);
             System.out.println("");
         }
         else if(opcionCatalogo==3)
@@ -60,6 +63,7 @@ public class Concesionario {
             vehiculo.calcularPrecio(plazas,precioBase);
             System.out.println(vehiculo);
             System.out.println("Añadido correctamente");
+            carrito.add(vehiculo);
             System.out.println("");
         }
         else if(opcionCatalogo==4)
@@ -72,6 +76,7 @@ public class Concesionario {
             vehiculo.calcularPrecio(plazas,precioBase);
             System.out.println(vehiculo);
             System.out.println("Añadido correctamente");
+            carrito.add(vehiculo);
             System.out.println("");
         }
         else if(opcionCatalogo==5)
@@ -88,6 +93,7 @@ public class Concesionario {
             vehiculo.precio=furgoneta.getCapacidad();
             System.out.println(vehiculo);
             System.out.println("Añadido correctamente");
+            carrito.add(vehiculo);            
             System.out.println("");
         }
         
@@ -95,6 +101,15 @@ public class Concesionario {
         {
             System.out.println("?#¡ ---> Opcion no disponible!");
         }
-
     }
-}
+
+    public void mostrarCarrito()
+    {
+        for(Vehiculo n : carrito)
+        {
+            System.out.println(n);
+            System.out.println("");
+        }
+       
+    }
+}   
