@@ -1,45 +1,23 @@
 package aplicacion;
 
 import dominio.Concesionario;
+import dominio.Vehiculo;
 import dominio.VehiculoTurismo;
+import interfaz.Interfaz;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
 public class Main
 {
-    public static void main(String[]args)
+    public static void main(String[]args) throws IOException, ClassNotFoundException
     {
-        int opcion;
-        boolean salir = true;
-        Concesionario concesionario = new Concesionario();
-        Scanner lectorInt = new Scanner(System.in);
-
-        
-        do{
-            System.out.println("1) Mostrar Concesionario");
-            System.out.println("2) Carrito");
-            System.out.println("3) Salir");
-            opcion = lectorInt.nextInt();
-            switch (opcion) 
-            {
-                case 1:
-                    concesionario.mostrarConcesionario();      
-                    break;
-                
-                case 2:
-                concesionario.mostrarCarrito();
-                    break;
-                case 3:
-                System.out.println("Gracias por usar el programa :)");
-                    salir = false;
-                    break;
-                
-                default:
-                System.out.println("ERROR");
-                    break;
-
-            }
-        }while(opcion>0 && opcion < 3);
-        
+        Interfaz interfaz = new Interfaz();
+        interfaz.leer();
+        interfaz.mostrarMenu();
     }
 }

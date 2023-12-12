@@ -1,4 +1,5 @@
 package dominio;
+import java.io.Serializable;
 
 public abstract class Vehiculo {
     String marca;
@@ -15,5 +16,6 @@ public abstract class Vehiculo {
    {
 
    }
+   
 
 }

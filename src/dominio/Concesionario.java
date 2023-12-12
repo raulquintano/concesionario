@@ -12,6 +12,11 @@ public class Concesionario {
     Scanner lectorInt = new Scanner(System.in);
     ArrayList<Vehiculo> carrito = new ArrayList<>();
 
+
+    public ArrayList<Vehiculo> getArrayList()
+    {
+        return carrito;
+    }
     public void mostrarConcesionario()
     {
         System.out.println("--VEHICULOS DISPONIBLES--");

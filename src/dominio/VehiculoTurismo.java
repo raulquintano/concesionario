@@ -1,6 +1,9 @@
 package dominio;
 
-public class VehiculoTurismo extends Vehiculo{
+import java.io.FileOutputStream;
+import java.io.Serializable;
+
+public class VehiculoTurismo extends Vehiculo implements Serializable{
 
     public VehiculoTurismo(String marca, String modelo, double precio)
     {
@@ -54,4 +57,5 @@ public class VehiculoTurismo extends Vehiculo{
     {
         return "Marca: "+ getMarca() + "\nModelo: " + getModelo() + "\nPrecio: " + getPrecio()+"$"; 
     }
+
 }
